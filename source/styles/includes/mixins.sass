@@ -1,0 +1,61 @@
+@mixin font($font-size, $line-height)
+    font-size: $font-size
+    line-height: $line-height
+
+@mixin roboto
+    font-family: "Roboto", "Arial", sans-serif
+    font-weight: 400
+
+@mixin roboto-300
+    font-family: "Robotolight", "Arial", sans-serif
+    font-weight: 300
+
+@mixin merriweather
+    font-family: "merriweatheritalic", "Arial", sans-serif
+    font-weight: 700
+
+@mixin reset-list
+    margin: 0
+    padding: 0
+    list-style: none
+
+@mixin reset-btn
+    padding: 0
+    background-color: transparent
+    border: none
+    cursor: pointer
+
+@mixin link
+    &
+        transition: background-color .1s
+        &:hover
+            background-color: fade-out($white, 0.5)
+            transition: 0.3s
+        &:active
+            background-color: $white
+        &:focus
+            outline: none
+            box-shadow: 0 0 0 2px $extra-dark
+
+@mixin focus
+    &
+        &:focus
+            outline: none
+            box-shadow: 0 0 0 2px $extra-dark
+
+// Центрирование
+@mixin align-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+@mixin align-top
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+@mixin align-left
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)

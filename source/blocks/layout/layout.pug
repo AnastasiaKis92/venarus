@@ -1,0 +1,12 @@
+include /blocks/mixins/mixins
+
+doctype html
+html.page(lang='ru')
+  block pageUrls
+  include /blocks/head/head
+
+  body.page__body
+    //- include /blocks/header/header
+
+    main: block content
+    //- include /blocks/footer/footer
