@@ -1,3 +1,9 @@
+@keyframes scroll
+    0%
+        transform: translateX(0%)
+    100%
+        transform: translateX(-50%)
+
 .promo
     position: relative
 
@@ -8,10 +14,11 @@
 
 .promo__svg
     position: absolute
-    top: -43%
+    top: -20%
+    left: 0
     z-index: -1
     @media (min-width: $tablet-width-1)
-        top: -30%
+        top: -10%
 
 .promo__img
     width: $mobile-width
@@ -55,11 +62,32 @@
         &::after
             mask-image: url('../images/svg-sprites/sprite.svg#btn-next')
 
+// Бегущая строка
+.promo__marquee
+    max-width: 100%
+    +roboto-300
+    overflow: hidden
+    border-top: 1px solid $border
+    border-bottom: 1px solid $border
+    & div
+        display: flex
+        width: 570%
+        animation: scroll 8s infinite linear
+        @media (min-width: $tablet-width-1)
+            animation-duration: 10s
+
+.promo__marquee-text
+    margin: 0
+    padding: 1rem 0
+    width: 100%
+    white-space: nowrap
+    color: $link
+    +font(1rem, calc(20/16))
+    text-transform: uppercase
+
 @media (min-width: $tablet-width)
     .promo__svg
-        top: -11%
-        @media (min-width: $desktop-width-1)
-            top: -3%
+        top: -7%
 
     .promo__wrapper
         display: grid
@@ -92,15 +120,22 @@
     .promo__button-wrapper
         grid-row: 2/3
         margin-top: 0
-        transform: translateY(-50%)
 
     .promo__button-buy
         grid-row: 3/4
-        transform: translateY(-50%)
+
+    // Бегущая строка
+    .promo__marquee
+        margin-top: 5.5rem
+        & div
+            animation-duration: 12s
+
+    .promo__marquee-text
+        +font(2rem, calc(40/32))
 
 @media (min-width: $desktop-width)
     .promo__svg
-        top: 5%
+        top: -8%
 
     .promo__wrapper
         grid-template-columns: auto 80%
@@ -139,7 +174,7 @@
             mask-repeat: no-repeat
             mask-size: cover
             mask-position: center
-            background-color: $svg
+            background-color: $border
         &--scheme
             &::before
                 mask-image: url('../images/svg-sprites/sprite.svg#link-scheme')
@@ -153,4 +188,7 @@
                 mask-image: url('../images/svg-sprites/sprite.svg#link-info')
 
     .promo__button-buy
-        transform: translateY(-100%)
+        transform: translateY(-50%)
+
+    .promo__marquee-text
+        +font(3rem, calc(56/48))

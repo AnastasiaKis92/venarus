@@ -26,23 +26,23 @@
 .burger__inner
     top: 10px
     &::before
-        content: ""
+        content: ''
         top: -7px
-        transition: top 0.3s 0.3s
+        transition: top 0.3s ease-in-out
     &::after
-        content: ""
+        content: ''
         bottom: -7px
-        transition: bottom 0.3s 0.3s
+        transition: bottom 0.3s ease-in-out
 
 .burger__inner.active::before
-    content: ""
+    content: ''
     top: 0px
-    transition: top 0.3s
+    transition: top 0.3s ease-in-out
 
 .burger__inner.active::after
-    content: ""
+    content: ''
     bottom: 0
-    transition: bottom 0.3s
+    transition: bottom 0.3s ease-in-out
 
 .burger__inner.active
     background: fade-out($white, 1)
