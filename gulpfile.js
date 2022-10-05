@@ -173,7 +173,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     template,
-    // script,
+    script,
     createWebp,
     svg,
     svgSprites
@@ -190,7 +190,7 @@ export const build = gulp.series(
   gulp.parallel (
     styles,
     template,
-    // script,
+    script,
     svg,
     svgSprites,
     createWebp

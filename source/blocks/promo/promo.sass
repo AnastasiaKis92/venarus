@@ -1,0 +1,156 @@
+.promo
+    position: relative
+
+.promo__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.promo__svg
+    position: absolute
+    top: -43%
+    z-index: -1
+    @media (min-width: $tablet-width-1)
+        top: -30%
+
+.promo__img
+    width: $mobile-width
+    height: auto
+    transform: scale(1.1)
+
+.promo__about
+    display: none
+
+.promo__title
+    width: $mobile-width
+    padding: 0 $xs
+
+.promo__button-wrapper
+    margin-bottom: 1rem
+    @media (min-width: $tablet-width-1)
+        margin-top: 1.5rem
+
+.promo__button
+    position: relative
+    +reset-btn
+    min-width: 34px
+    min-height: 34px
+    border: 1px solid $btn
+    border-radius: 50%
+    & + &
+        margin-left: 1rem
+    &::after
+        +align-center
+        width: 13px
+        height: 13px
+        content: ''
+        mask-repeat: no-repeat
+        mask-size: cover
+        mask-position: center
+        background-color: $btn
+    &--prev
+        &::after
+            mask-image: url('../images/svg-sprites/sprite.svg#btn-prev')
+    &--next
+        &::after
+            mask-image: url('../images/svg-sprites/sprite.svg#btn-next')
+
+@media (min-width: $tablet-width)
+    .promo__svg
+        top: -11%
+        @media (min-width: $desktop-width-1)
+            top: -3%
+
+    .promo__wrapper
+        display: grid
+        grid-template-columns: auto auto
+        grid-template-rows: repeat(3, auto)
+
+    .promo__title
+        align-self: start
+        grid-column: 1/2
+        grid-row: 1/2
+        padding: 0
+
+    .promo__img,
+    .promo__button-wrapper,
+    .promo__button-buy
+        grid-column: 2/3
+        justify-self: center
+
+    .promo__img
+        grid-row: 1/2
+        width: 938px
+        height: auto
+        transform: translate(-10%, 5%)
+
+    .promo__button
+        @extend .button--secondary
+        width: 50px
+        height: 50px
+
+    .promo__button-wrapper
+        grid-row: 2/3
+        margin-top: 0
+        transform: translateY(-50%)
+
+    .promo__button-buy
+        grid-row: 3/4
+        transform: translateY(-50%)
+
+@media (min-width: $desktop-width)
+    .promo__svg
+        top: 5%
+
+    .promo__wrapper
+        grid-template-columns: auto 80%
+
+    .promo__button
+        width: 68px
+        height: 68px
+
+    .promo__img
+        transform: translate(-10%, 12%)
+
+    .promo__about
+        display: block
+        grid-column: 1/2
+        grid-row: 2/4
+        transform: translateY(-25%)
+
+    .promo__list
+        +reset-list
+
+    .promo__item
+        & + &
+            margin-top: 2rem
+
+    .promo__link
+        display: block
+        position: relative
+        padding: 1.4rem 0 1.4rem 6rem
+        &::before
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 69px
+            height: 67px
+            mask-repeat: no-repeat
+            mask-size: cover
+            mask-position: center
+            background-color: $svg
+        &--scheme
+            &::before
+                mask-image: url('../images/svg-sprites/sprite.svg#link-scheme')
+        &--instruction
+            &::before
+                mask-image: url('../images/svg-sprites/sprite.svg#link-instruction')
+        &--info
+            &::before
+                width: 80px
+                height: 80px
+                mask-image: url('../images/svg-sprites/sprite.svg#link-info')
+
+    .promo__button-buy
+        transform: translateY(-100%)

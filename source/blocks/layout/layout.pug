@@ -6,7 +6,9 @@ html.page(lang='ru')
   include /blocks/head/head
 
   body.page__body
-    //- include /blocks/header/header
+    include /blocks/header/header
 
     main: block content
     //- include /blocks/footer/footer
+    script(src='scripts/main.min.js' type='module')
+

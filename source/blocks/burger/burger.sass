@@ -1,0 +1,73 @@
+.burger
+    position: absolute
+    top: 0.5rem
+    right: 0.5rem
+    display: block
+    width: 46px
+    height: 27px
+    padding: 0
+    background-color: transparent
+    cursor: pointer
+    border: none
+    z-index: 10
+
+.burger__inner,
+.burger__inner::before,
+.burger__inner::after
+    display: block
+    position: absolute
+    width: 37px
+    height: 16px
+    background-image: url('../images/svg-sprites/sprite.svg#burger')
+    background-repeat: no-repeat
+    background-size: cover
+    transition: 0.3s
+
+.burger__inner
+    top: 10px
+    &::before
+        content: ""
+        top: -7px
+        transition: top 0.3s 0.3s
+    &::after
+        content: ""
+        bottom: -7px
+        transition: bottom 0.3s 0.3s
+
+.burger__inner.active::before
+    content: ""
+    top: 0px
+    transition: top 0.3s
+
+.burger__inner.active::after
+    content: ""
+    bottom: 0
+    transition: bottom 0.3s
+
+.burger__inner.active
+    background: fade-out($white, 1)
+
+@media (min-width: $tablet-width)
+    .burger
+        top: 1.5rem
+        right: 4rem
+        width: 66px
+        height: 40px
+
+    .burger__inner,
+    .burger__inner::before,
+    .burger__inner::after
+        width: 71px
+        height: 28px
+
+    .burger__inner
+        &::before
+            top: -13px
+        &::after
+            bottom: -13px
+
+@media (min-width: $desktop-width)
+    .burger
+        top: 2rem
+        right: 9.6rem
+

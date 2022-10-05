@@ -1,0 +1,67 @@
+.nav
+    position: absolute
+    width: 100%
+    height: 100vh
+    padding-top: 1rem
+    left: -100%
+    z-index: 10
+    transition-duration: 0.2s
+    background-color: $white
+    &.animate
+        left: 0
+        height: 100vh
+        transition: left 0.3s 0.3s
+
+.nav__wrapper
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-repeat: no-repeat
+        background-size: contain
+        z-index: -1
+        background-image: url('../images/svg-sprites/sprite.svg#menu-1'), url('../images/svg-sprites/sprite.svg#menu-2'), url('../images/svg-sprites/sprite.svg#menu-3'), url('../images/svg-sprites/sprite.svg#menu-4'), url('../images/svg-sprites/sprite.svg#menu-5')
+        background-position: center top 0, center top 30%, center top 45%, center top 75%, center top 90%
+
+.nav__list
+    +reset-list
+
+.nav__item
+    color: $black
+    padding: 0 $xs
+    & + &
+        margin-top: 3.4rem
+    &--active
+        color: $purple
+
+.nav__link
+    +merriweather
+    +font(1rem, 1)
+
+@media (min-width: $tablet-width)
+    .nav__wrapper
+        padding-top: 5rem
+        &::after
+            background-position: center top 12%, center top 25%, center top 40%, center top 65%, center top 75%
+
+    .nav__item
+        padding: 0 $xm
+        & + &
+            margin-top: 5.3rem
+
+@media (min-width: $desktop-width)
+    .nav
+        left: -200%
+
+    .nav__wrapper
+        padding-top: 9.6rem
+        &::after
+            background-position: center top, center top 47%, center top 55%, center top 100%, center top 105%
+
+    .nav__item
+        padding: 0 $xl

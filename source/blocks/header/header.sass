@@ -1,0 +1,43 @@
+.header__list
+    +reset-list
+    display: flex
+    padding-right: 3.125rem
+
+.header__item
+    &:first-of-type
+        margin-right: auto
+
+.header__link
+    display: block
+    height: 28px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    &--logo
+        width: 135px
+        background-image: url('../images/svg-sprites/sprite.svg#logo')
+    &--search
+        width: 28px
+        background-image: url('../images/svg-sprites/sprite.svg#search')
+    &--info
+        width: 25px
+        background-image: url('../images/svg-sprites/sprite.svg#info')
+
+@media (min-width: $tablet-width)
+    .header__list
+        padding-right: 6.8rem
+
+    .header__item
+        & + &
+            margin-left: 3rem
+
+    .header__link
+        &--logo
+            width: 195px
+            height: 39px
+        &--search
+            width: 48px
+            height: 47px
+        &--info
+            width: 41px
+            height: 47px
