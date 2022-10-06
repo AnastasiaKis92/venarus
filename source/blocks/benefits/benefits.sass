@@ -1,0 +1,108 @@
+.benefits__list
+    +reset-list
+
+.benefits__item
+    position: relative
+    display: flex
+    align-items: center
+    min-height: 50px
+    padding-left: 5rem
+    & + &
+        margin-top: 1rem
+    &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 2%
+            width: 58px
+            height: 45px
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+    &--eff
+        &::before
+            background-image: url('../images/svg-sprites/sprite.svg#benefits-eff')
+    &--dose
+        &::before
+            background-image: url('../images/svg-sprites/sprite.svg#benefits-dose')
+    &--tab
+        &::before
+            background-image: url('../images/svg-sprites/sprite.svg#benefits-tab')
+
+.benefits__text
+    margin: 0
+    +merriweather
+    color: $extra-black
+    +font(0.875rem, calc(16/14))
+
+// Tooltip
+.benefits__tooltip-btn
+    +reset-btn
+    width: 20px
+    height: 19px
+    mask-repeat: no-repeat
+    mask-size: cover
+    mask-position: center
+    mask-image: url('../images/svg-sprites/sprite.svg#benefits-info')
+    background-color: $border
+    transform: translateY(5px)
+    cursor: pointer
+
+.benefits__tooltip-text
+    pointer-events: none
+    opacity: 0
+    position: absolute
+    top: 110%
+    left: 50%
+    transform: translateX(-50%)
+    min-width: 200px
+    padding: 0.5rem
+    text-align: center
+    border: 1px solid $border
+    border-radius: 26px
+    transition: opacity 0.1s ease-in-out
+    &.animate
+        opacity: 1
+        transition: opacity 0.3s ease-in-out
+
+@media (min-width: $tablet-width)
+    .benefits.container
+        padding: 3rem $xm
+
+    .benefits__list
+        display: flex
+        justify-content: space-between
+
+    .benefits__item
+        max-width: 277px
+        & + &
+            margin-top: 0
+
+    .benefits__text
+        +font(1rem, calc(24/16))
+
+@media (min-width: $desktop-width)
+    .benefits.container
+        padding: 6rem $xl
+
+    .benefits__item
+        max-width: 314px
+        min-height: 67px
+        padding-left: 7rem
+        &::before
+            width: 85px
+            height: 67px
+
+    // Tooltip
+    .benefits__tooltip-btn
+        width: 30px
+        height: 30px
+        transform: translateY(10px)
+        transition: opacity 0.1s
+        &:hover
+            opacity: 0.7
+            transition: opacity 0.3s ease-in-out
+        &:hover + .benefits__tooltip-text
+            pointer-events: auto
+            opacity: 1
+            transition: opacity 0.3s ease-in-out
