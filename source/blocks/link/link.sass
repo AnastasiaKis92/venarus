@@ -1,4 +1,7 @@
 .link
     color: $link
-    +font(1.125rem, calc(21/18))
     text-decoration: underline
+    text-underline-offset: 4px
+    // +font(1.125rem, calc(21/18))
+    @media (min-width: $desktop-width)
+        +font(1.125rem, calc(21/18))
