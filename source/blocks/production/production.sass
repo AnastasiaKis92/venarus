@@ -1,0 +1,205 @@
+.svg-container
+    position: absolute
+    width: 100%
+    height: 400px
+    z-index: 1
+    & svg
+        position: absolute
+        width: 100%
+        height: 550px
+        top: -63%
+        @media (min-width: $tablet-width-1)
+            top: -38%
+
+.production__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    z-index: 2
+    &.container
+        padding-top: 2rem
+        @media (min-width: $tablet-width-1)
+            padding-top: 5rem
+
+.production__title
+    align-self: flex-start
+    width: 250px
+    margin-bottom: 2rem
+    z-index: 2
+
+.production__img
+    width: 263px
+    height: auto
+
+.production__link
+    display: block
+    position: absolute
+    top: 26%
+    left: 54%
+    &::after
+        position: absolute
+        content: ''
+        width: 30px
+        height: 30px
+        background-image: url('../images/svg-sprites/sprite.svg#play')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+
+.production__button
+    margin-top: 1.5rem
+    z-index: 2
+
+// Swiper
+.swiper
+    width: 292px
+    height: 225px
+    text-align: center
+
+.swiper-button-prev,
+.swiper-button-next
+    +reset-btn
+    top: auto
+    bottom: 0
+    width: 34px
+    height: 34px
+    border: 1px solid $btn
+    border-radius: 50%
+    &::after
+        +align-center
+        width: 13px
+        height: 13px
+        content: ''
+        mask-repeat: no-repeat
+        mask-size: cover
+        mask-position: center
+        background-color: $btn
+
+.swiper-rtl .swiper-button-prev
+    left: 0
+    right: 57%
+    &::after
+        mask-image: url('../images/svg-sprites/sprite.svg#btn-prev')
+
+.swiper-rtl .swiper-button-next
+    right: 30%
+    &::after
+        mask-image: url('../images/svg-sprites/sprite.svg#btn-next')
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+    content: ''
+
+@media (min-width: $tablet-width)
+    .svg-container
+        & svg
+            top: -55%
+            height: 859px
+            @media (min-width: $desktop-width-1)
+                top: -17%
+
+    .production__link
+        top: 33%
+        left: 56%
+        &::after
+            width: 54px
+            height: 54px
+
+    .production__wrapper.container
+        padding-top: 8rem
+
+    .production__img
+        width: 350px
+        height: auto
+
+    .production__button
+        margin-top: 0
+
+    // Swiper
+    .swiper
+        width: 500px
+
+    .swiper-button-prev,
+    .swiper-button-next
+        @extend .button--secondary
+        top: auto
+        width: 50px
+        height: 50px
+        &::after
+            width: 18px
+            height: 18px
+
+    .swiper-rtl .swiper-button-prev
+        right: 0
+        bottom: 52%
+
+    .swiper-rtl .swiper-button-next
+        right: 0
+        bottom: 22%
+
+@media (min-width: $desktop-width)
+    .production__wrapper
+        display: flex
+        min-width: 0
+
+    .production__wrapper.container
+        padding-top: 17rem
+
+    .production__title
+        width: 300px
+
+    .production__button
+        transform: translate(160%, -144%)
+
+    .production__link
+        top: 37%
+        left: 37%
+        &::after
+            width: 68px
+            height: 68px
+
+    // Swiper
+    .swiper
+        width: 80%
+        height: 314px
+        transform: translate(15%, -38%)
+
+    .production__slide
+        display: flex
+        align-items: center
+
+    .swiper-slide .production__img
+        width: 263px
+        height: auto
+        object-fit: cover
+
+    .swiper-slide-active .production__img
+        width: 470px
+        height: auto
+        margin-right: 100px
+        object-fit: cover
+        box-shadow: -10px 10px 20px 0 fade-out($black, 0.7)
+        transition: all .6s ease-in-out
+
+    .swiper-slide-active
+        width: 470px!important
+
+    .swiper-button-prev,
+    .swiper-button-next
+        width: 68px
+        height: 68px
+        &::after
+            width: 27px
+            height: 27px
+        +hover
+
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+        content: ''
+
+    .swiper-rtl .swiper-button-prev
+        right: 2%
+        bottom: 54%
+
+    .swiper-rtl .swiper-button-next
+        right: 2%

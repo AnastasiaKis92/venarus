@@ -25,24 +25,13 @@
     border: none
     cursor: pointer
 
-@mixin link
+@mixin hover
     &
-        transition: background-color .1s
+        transition: opacity 0.1s
         &:hover
-            background-color: fade-out($white, 0.5)
-            transition: 0.3s
-        &:active
-            background-color: $white
-        &:focus
-            outline: none
-            box-shadow: 0 0 0 2px $extra-dark
-
-@mixin focus
-    &
-        &:focus
-            outline: none
-            box-shadow: 0 0 0 2px $extra-dark
-
+            opacity: 0.7
+            transition: opacity 0.3s
+            
 // Центрирование
 @mixin align-center
     position: absolute
