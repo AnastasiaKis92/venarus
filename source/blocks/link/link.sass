@@ -2,6 +2,31 @@
     color: $link
     text-decoration: underline
     text-underline-offset: 4px
-    // +font(1.125rem, calc(21/18))
     @media (min-width: $desktop-width)
         +font(1.125rem, calc(21/18))
+
+.link--round
+    display: block
+    position: absolute
+    &::after
+        position: absolute
+        content: ''
+        width: 30px
+        height: 30px
+        background-image: url('../images/svg-sprites/sprite.svg#play')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+
+@media (min-width: $tablet-width)
+    .link--round
+        &::after
+            width: 54px
+            height: 54px
+
+@media (min-width: $desktop-width)
+    .link--round
+        +hover
+        &::after
+            width: 68px
+            height: 68px

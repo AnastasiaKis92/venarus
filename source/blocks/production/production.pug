@@ -1,7 +1,7 @@
 section.production
   .svg-container
     svg(width='1440' height='859' preserveAspectRatio='xMidYMax meet' viewbox='0 0 1440 859' fill='none' xmlns='http://www.w3.org/2000/svg')
-      path(d='M1154.4 51.0913C876.813 192.242 809.376 302.125 389.958 269.186C143.301 249.815 0 334.565 0 334.565L2.28564e-05 576.116C2.28564e-05 576.116 175.756 431.385 616.144 681.919C1056.53 932.453 1440 842.168 1440 842.168V7.10834C1440 7.10834 1306.19 -26.0934 1154.4 51.0913Z' fill='url(#paint0_linear_2_124)')
+      path(d='M1154.4 51.1C876.81 192.23 809.38 302.12 389.96 269.18 143.3 249.8 0 334.57 0 334.57v241.55s175.76-144.74 616.14 105.8C1056.53 932.45 1440 842.17 1440 842.17V7.1s-133.81-33.2-285.6 43.98Z' fill='url(#paint0_linear_2_124)')
       defs
         lineargradient#paint0_linear_2_124(x1='1323.66' y1='471.808' x2='227.732' y2='843.759' gradientunits='userSpaceOnUse')
           stop(stop-color='#590D56')
@@ -13,13 +13,14 @@ section.production
     .production__slider.swiper(dir='rtl')
       .production__slider-wrapper.swiper-wrapper
         .production__slide.swiper-slide
-          a.production__link(href='#')
+          a.link--round.production__link(href='#')
           .production__picture
             +picture( 'production__img', 'production-1', 'Фотография завода', '458', '270')
 
         .production__slide.swiper-slide
           .production__picture
             +picture( 'production__img', 'production-2', 'Фотография завода', '263', '150')
+
         .production__slide.swiper-slide
           .production__picture
             +picture( 'production__img', 'production-2', 'Фотография завода', '263', '150')

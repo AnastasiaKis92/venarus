@@ -1,0 +1,79 @@
+.opinion__img
+    width: 292px
+    height: auto
+
+.opinion__link
+    top: 43%
+    left: 43%
+
+// Swiper pagination
+.opinion__slider.swiper
+    width: 292px
+
+.opinion__pagination.swiper-pagination
+    display: block
+    position: relative
+    margin-top: 1rem
+    text-align: left
+
+button.swiper-pagination-bullet
+    width: 16px
+    height: 16px
+    background-color: $white
+    opacity: 1
+    box-shadow: 0 0 0 1px $border
+    & + &
+        margin-left: 1rem!important
+
+button.swiper-pagination-bullet-active
+    background-color: $link
+
+@media (min-width: $tablet-width)
+    .opinion.container
+        padding-top: 5rem
+
+    .opinion__img
+        width: 450px
+        height: auto
+
+    .opinion__link
+        top: 43%
+        left: 43%
+
+    // Swiper pagination
+    .opinion__slider.swiper
+        width: 450px
+
+@media (min-width: $desktop-width-1)
+    .opinion__text
+        width: 36%
+
+@media (min-width: $desktop-width)
+    .opinion
+        display: flex
+
+    .opinion__wrapper
+        width: 22%
+        margin-right: 2rem
+
+    .opinion__text
+        width: 100%
+
+    .opinion__img
+        width: 847px
+        height: auto
+
+    .opinion__link
+        left: 46%
+
+    // Swiper pagination
+    .opinion__slider.swiper
+        width: 847px
+        height: 623px
+
+    .opinion__pagination.swiper-pagination
+        position: absolute
+        bottom: 2px
+
+    button.swiper-pagination-bullet
+        +hover
