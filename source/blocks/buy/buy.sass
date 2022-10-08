@@ -1,0 +1,68 @@
+.buy
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.buy__title
+    width: 130px
+
+.buy__img
+    width: 320px
+    height: auto
+
+.buy__wrapper-btn
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 1rem
+
+.buy__button
+    & + &
+        margin-top: 1rem
+
+@media (min-width: $tablet-width)
+    .buy.container
+        padding-top: 5rem
+
+    .buy__wrapper--title
+        align-self: flex-start
+        width: 100%
+
+    .buy__img
+        width: 500px
+        height: auto
+
+    .buy__wrapper-btn
+        flex-direction: row
+
+    .buy__button
+        & + &
+            margin-top: 0
+            margin-left: 1rem
+
+@media (min-width: $desktop-width)
+    .buy
+        flex-direction: row
+        &.container
+            padding-top: 8rem
+
+    .buy__wrapper
+        &--title
+            width: 22%
+            margin-right: 2rem
+        &--img
+            display: flex
+            flex-direction: column
+            // align-items: center
+            transform: translate(-2%, -13%)
+
+    .buy__img
+        width: 700px
+        height: auto
+
+    .buy__wrapper-btn
+        margin-top: 1rem
+
+    .buy__button
+        & + &
+            margin-left: 2rem

@@ -11,10 +11,11 @@ section.promo
           stop(offset='1' stop-color='#8C1688')
 
     picture
-      source(media='(min-width: 860px)' type='image/webp' srcset='images/promo-desk.webp 1x, images/promo-desk@2x.webp 2x')
-      source(type='image/webp' srcset='images/promo.webp 1x, images/promo@2x.webp 2x')
-      source(media='(min-width: 860px)' srcset='images/promo-desk.png 1x, images/promo-desk@2x.png 2x')
-      img.promo__img(src='images/promo.png' srcset='images/promo@2x.png 2x' alt='Фото питания для котов.' width='320' height='228')
+      source(media='(min-width: 860px)' type='image/webp' srcset='images/venarus-desk.webp 1x, images/venarus-desk@2x.webp 2x')
+      source(media='(min-width: 860px)' srcset='images/venarus-desk.png 1x, images/venarus-desk@2x.png 2x')
+
+      source(type='image/webp' srcset='images/venarus.webp 1x, images/venarus@2x.webp 2x')
+      img.promo__img(src='images/venarus.png' srcset='images/venarus@2x.png 2x' alt='Изображение препарата Венарус' width='320' height='228')
 
     .promo__about
       ul.promo__list
@@ -30,7 +31,7 @@ section.promo
         span.visually-hidden Назад
       button.promo__button.promo__button--next(type='button')
         span.visually-hidden Вперед
-    button.button.button--secondary.promo__button-buy(type='button') Где купить >
+    button.button.button--secondary.button--hover-light.promo__button-buy(type='button') Где купить >
 
   .promo__marquee
     div
