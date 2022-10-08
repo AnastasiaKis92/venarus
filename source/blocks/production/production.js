@@ -12,8 +12,6 @@ const initProductionSlider = () => new Swiper('.production__slider', {
     1440: {
       slidesPerView: 2,
       spaceBetween: 130,
-      // loop: true,
-
     }
   },
 

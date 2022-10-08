@@ -9,12 +9,15 @@
 
 .header__link
     display: block
+    opacity: 1
+    pointer-events: auto
     height: 28px
     background-repeat: no-repeat
     background-size: cover
     background-position: center
+    transition: opacity 0.1s
     &--logo
-        width: 135px
+        width: 150px
         background-image: url('../images/svg-sprites/sprite.svg#logo')
     &--search
         width: 28px
@@ -22,6 +25,10 @@
     &--info
         width: 25px
         background-image: url('../images/svg-sprites/sprite.svg#info')
+    &.shown
+        opacity: 0
+        transition: opacity 0.3s
+        pointer-events: none
 
 @media (min-width: $tablet-width)
     .header__list
@@ -33,7 +40,7 @@
 
     .header__link
         &--logo
-            width: 195px
+            width: 212px
             height: 39px
         &--search
             width: 48px

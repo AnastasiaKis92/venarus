@@ -1,6 +1,6 @@
 .burger
     position: absolute
-    top: 0.5rem
+    top: 1rem
     right: 0.5rem
     display: block
     width: 46px
@@ -16,8 +16,8 @@
 .burger__inner::after
     display: block
     position: absolute
-    width: 37px
-    height: 16px
+    width: 51px
+    height: 8px
     background-image: url('../images/svg-sprites/sprite.svg#burger')
     background-repeat: no-repeat
     background-size: cover
@@ -49,16 +49,16 @@
 
 @media (min-width: $tablet-width)
     .burger
-        top: 1.5rem
+        top: 2rem
         right: 4rem
-        width: 66px
+        width: 90px
         height: 40px
 
     .burger__inner,
     .burger__inner::before,
     .burger__inner::after
-        width: 71px
-        height: 28px
+        width: 84px
+        height: 16px
 
     .burger__inner
         &::before
@@ -68,6 +68,5 @@
 
 @media (min-width: $desktop-width)
     .burger
-        top: 2rem
-        right: 9.6rem
-
+        top: 2.2rem
+        right: 10rem

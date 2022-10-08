@@ -3,7 +3,6 @@
     width: 100%
     height: 400px
     z-index: -1
-    // overflow: hidden
     & svg
         position: absolute
         width: 100%
@@ -54,14 +53,18 @@
         & > .info__link
             width: 155px
             height: 270px
-            background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-1.jpg')
+            background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-1.webp')
+            @media (min-resolution: 2dppx)
+                background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-1@2x.webp')
     &--care
         grid-column: 2/3
         grid-row: 1/2
         & > .info__link
             width: 130px
             height: 130px
-            background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-2.jpg')
+            background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-2.webp')
+            @media (min-resolution: 2dppx)
+                background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-2@2x.webp')
 
     &--food
         grid-column: 2/3
@@ -69,7 +72,9 @@
         & > .info__link
             width: 130px
             height: 130px
-            background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-3.jpg')
+            background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-3.webp')
+            @media (min-resolution: 2dppx)
+                background-image: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url('../images/info-3@2x.webp')
 
     &--varicose
         grid-column: 1/3
