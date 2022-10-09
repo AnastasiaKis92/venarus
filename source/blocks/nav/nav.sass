@@ -3,14 +3,14 @@
     width: 100%
     height: 100vh
     padding-top: 2rem
-    left: -100%
-    z-index: 10
-    transition-duration: 0.3s
     background-color: $white
+    transform: translateX(-200%)
+    transition-duration: transform 0.2s
+    z-index: 10
     &.animate
-        left: 0
         height: 100vh
-        transition: left 0.7s ease-in-out
+        transform: translateX(-$xs)
+        transition: transform 0.2s ease-in-out
 
 .nav__wrapper
     width: 100%
@@ -62,6 +62,10 @@
     +font(1rem, 1)
 
 @media (min-width: $tablet-width)
+    .nav
+        &.animate
+            transform: translateX(-$xm)
+
     .nav__wrapper
         padding-top: 5rem
 
@@ -83,7 +87,11 @@
 
 @media (min-width: $desktop-width)
     .nav
-        left: -300%
+        width: 105%
+        transition-duration: transform 0.4s
+        &.animate
+            transform: translateX(-$xl)
+            transition: transform 0.2s ease-in-out
 
     .nav__wrapper
         padding-top: 4rem
