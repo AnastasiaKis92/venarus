@@ -1,16 +1,17 @@
-header.header.container
-  ul.header__list
-    li.header__item
-      a.header__link.header__link--logo(href='/')
-        span.visually-hidden Логотип Венарус
+header.header
+  .header__wrapper.container
+    ul.header__list
+      li.header__item
+        a.header__link.header__link--logo(href='/')
+          span.visually-hidden Логотип Венарус
 
-    li.header__item
-      a.header__link.header__link--search(href='#')
-        span.visually-hidden Поиск по сайту
+      li.header__item
+        a.header__link.header__link--search(href='#')
+          span.visually-hidden Поиск по сайту
 
-    li.header__item
-      a.header__link.header__link--info(href='#')
-        span.visually-hidden Информация
+      li.header__item
+        a.header__link.header__link--info(href='#')
+          span.visually-hidden Информация
 
-  include /blocks/burger/burger.pug
+    include /blocks/burger/burger.pug
   include /blocks/nav/nav.pug

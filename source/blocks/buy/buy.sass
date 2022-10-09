@@ -1,7 +1,4 @@
 .buy
-    display: flex
-    flex-direction: column
-    align-items: center
     background-image: linear-gradient(360deg, rgba(71, 9, 62, 0.5) -7.14%, rgba(255, 255, 255, 0) 100%)
     background-size: 100% 30px
     background-repeat: no-repeat
@@ -14,6 +11,12 @@
     width: 320px
     height: auto
     transform: scale(1.1)
+
+.buy__wrapper
+    display: flex
+    flex-direction: column
+    &--img
+        align-items: center
 
 .buy__wrapper-btn
     display: flex
@@ -32,7 +35,6 @@
             padding-top: 5rem
 
     .buy__wrapper--title
-        align-self: flex-start
         width: 100%
 
     .buy__img
@@ -49,8 +51,10 @@
 
 @media (min-width: $desktop-width)
     .buy
-        flex-direction: row
         background-size: 100% 60px
+
+    .buy__container
+        display: flex
         &.container
             padding-top: 8rem
 
@@ -59,14 +63,12 @@
             width: 22%
             margin-right: 2rem
         &--img
-            display: flex
-            flex-direction: column
             margin-top: -6%
 
     .buy__img
         width: 700px
         height: auto
-        transform: translateX(7%)
+        transform: translateX(-2%)
 
     .buy__wrapper-btn
         margin: 1rem 0 4rem

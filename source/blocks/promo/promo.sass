@@ -14,11 +14,12 @@
 
 .promo__svg
     position: absolute
-    top: -20%
+    top: 7%
     left: 0
+    height: 270px
     z-index: -1
     @media (min-width: $tablet-width-1)
-        top: -10%
+        height: 400px
 
 .promo__img
     width: $mobile-width
@@ -29,8 +30,8 @@
     display: none
 
 .promo__title
-    width: $mobile-width
-    padding: 0 $xs
+    align-self: flex-start
+    width: 290px
 
 .promo__button-wrapper
     margin-bottom: 1rem
@@ -87,17 +88,20 @@
 
 @media (min-width: $tablet-width)
     .promo__svg
-        top: -7%
+        top: 0
+        height: 500px
 
     .promo__wrapper
         display: grid
         grid-template-columns: auto auto
         grid-template-rows: repeat(3, auto)
+        justify-items: center
 
     .promo__title
         align-self: start
         grid-column: 1/2
         grid-row: 1/2
+        justify-self: start
         padding: 0
 
     .promo__img,
@@ -108,7 +112,7 @@
 
     .promo__img
         grid-row: 1/2
-        width: 938px
+        width: 522px
         height: auto
         transform: translate(-10%, 5%)
 
@@ -122,7 +126,7 @@
 
     .promo__button-wrapper
         grid-row: 2/3
-        margin-top: 0
+        margin-top: -1rem
         margin-bottom: 1.5rem
 
     .promo__button-buy
@@ -137,12 +141,23 @@
     .promo__marquee-text
         +font(2rem, calc(40/32))
 
+@media (min-width: $desktop-width-1)
+    .promo__svg
+        height: 650px
+
+    .promo__img
+        width: 722px
+        height: auto
+
 @media (min-width: $desktop-width)
     .promo__svg
-        top: -8%
+        height: 800px
 
     .promo__wrapper
         grid-template-columns: auto 80%
+
+    .promo__title
+        width: 333px
 
     .promo__button
         width: 68px
@@ -153,12 +168,15 @@
             height: 27px
 
     .promo__img
+        width: 938px
+        height: auto
         transform: translate(-10%, 12%)
 
     .promo__about
         display: block
         grid-column: 1/2
         grid-row: 2/4
+        justify-self: start
         transform: translateY(-25%)
 
     .promo__list
@@ -200,3 +218,7 @@
 
     .promo__marquee-text
         +font(3rem, calc(56/48))
+
+    .promo__marquee
+        & div
+            animation-duration: 20s

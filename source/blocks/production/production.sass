@@ -1,14 +1,14 @@
-.production__svg-container
+.production
+    position: relative
+
+.production__svg
     position: absolute
+    top: 15%
     width: 100%
-    height: 400px
-    & svg
-        position: absolute
-        width: 100%
-        height: 550px
-        top: -63%
-        @media (min-width: $tablet-width-1)
-            top: -38%
+    height: 240px
+    @media (min-width: $tablet-width-1)
+        top: 5%
+        height: 330px
 
 .production__wrapper
     display: flex
@@ -78,12 +78,12 @@
     content: ''
 
 @media (min-width: $tablet-width)
-    .production__svg-container
-        & svg
-            top: -55%
-            height: 859px
-            @media (min-width: $desktop-width-1)
-                top: -32%
+    .production__svg
+        top: 5%
+        height: 630px
+        @media (min-width: $desktop-width-1)
+            top: 0
+            height: 700px
 
     .production__link
         top: 33%
@@ -129,8 +129,9 @@
     .production__wrapper.container
         padding-top: 17rem
 
-    .production__svg-container svg
-        top: -21%
+    .production__svg
+        top: -12%
+        height: 857px
 
     .production__button
         margin-top: 0

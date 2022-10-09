@@ -1,15 +1,13 @@
-.info__svg-container
+.info
+    position: relative
+
+.info__svg
     position: absolute
     width: 100%
-    height: 400px
+    height: 300px
     z-index: -1
-    & svg
-        position: absolute
-        width: 100%
-        height: 860px
-        top: 38%
-        @media (min-width: $tablet-width-1)
-            top: -5%
+    @media (min-width: $tablet-width-1)
+        height: 400px
 
 .info__wrapper
     display: flex
@@ -19,6 +17,9 @@
 .info__title,
 .info__subtitle
     align-self: flex-start
+
+.info__subtitle
+    color: $white
 
 .info__svg-container
     position: absolute
@@ -84,17 +85,14 @@
             height: 100%
             background-color: $border
 
-@media (min-width: $tablet-width-1)
-    .info__subtitle
-        color: $white
-
 @media (min-width: $tablet-width)
     .info__container.container
         padding-top: 5rem
 
-    .info__svg-container
-        & svg
-            top: -15%
+    .info__svg
+        height: 600px
+        @media (min-width: $desktop-width-1)
+            height: 700px
 
     .info__wrapper--grid
         align-items: center
@@ -144,6 +142,10 @@
                     width: 50%
 
 @media (min-width: $desktop-width)
+    .info__svg
+        top: -8%
+        height: 858px
+
     .info, .info__container
         display: flex
 
