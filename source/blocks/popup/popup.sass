@@ -1,0 +1,52 @@
+.popup,
+.popup.active
+    position: fixed
+    opacity: 0
+    pointer-events: none
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 60%
+    min-width: 294px
+    max-width: 500px
+    min-height: 300px
+    background-color: $white
+    border: 1px solid $border
+    border-radius: 30px
+    z-index: 30
+    transition: opacity 0.1s
+    &.active
+        opacity: 1
+        pointer-events: auto
+        transition: opacity 0.3s
+
+.popup__text
+    margin: 0
+
+.popup__button
+    position: relative
+    display: block
+    +reset-btn
+    width: 25px
+    height: 25px
+    margin-left: auto
+    &::after
+        content: ''
+        +align-center
+        width: 15px
+        height: 15px
+        background-color: $purple
+        mask-image: url("../images/svg-sprites/sprite.svg#cross")
+        mask-repeat: no-repeat
+        mask-position: center
+        mask-size: cover
+
+@media (min-width: $tablet-width)
+    .popup__button
+        &::after
+            width: 20px
+            height: 20px
+
+@media (min-width: $desktop-width)
+    .popup.container
+        padding: 1.5rem $xm

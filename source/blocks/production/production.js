@@ -4,6 +4,7 @@ const initProductionSlider = () => new Swiper('.production__slider', {
   modules: [Navigation],
   speed: 700,
   slideToClickedSlide: true,
+  watchSlidesProgress: true,
 
   breakpoints: {
     320: {

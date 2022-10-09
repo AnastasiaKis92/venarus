@@ -1,3 +1,9 @@
+.opinion
+    display: flex
+    min-width: 0
+    flex-direction: column
+    align-items: center
+
 .opinion__img
     width: 292px
     height: auto
@@ -46,7 +52,7 @@ button.swiper-pagination-bullet-active
 
 @media (min-width: $desktop-width)
     .opinion
-        display: flex
+        flex-direction: row
 
     .opinion__wrapper
         width: 22%
